@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: "{{REPOSITORY_TAG}}"
+        image: muhammadadel8/muhammadadel8-maven:{{BUILD_NUMBER}}
         resources:
           requests:
              memory: 512Mi
