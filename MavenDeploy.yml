@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: maven-deployment
+  labels:
+    app: maven
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: maven
+  template:
+    metadata:
+      labels:
+        app: maven
+    spec:
+      containers:
+      - name: maven
+        image: muhammadadel8/maven-image:{Build-number}
+        ports:
+        - containerPort: 8080
